@@ -1,0 +1,184 @@
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+body {
+    margin: 0 auto;
+    font-family: Lato;
+}
+
+.header_wrapper {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.header {
+    padding: 15px;
+    border-bottom: 10px;
+    border-color: #183354;
+    border-style: solid;
+}
+
+.logo {
+    width: 400px;
+    background-image:url('https://www.recipetineats.com/content/themes/once-coupled-recipe-tin-eats/build/5da59c0410ec099d10d2.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.searchBar input {
+    padding: 12px;
+    font-size: 1rem;
+    width: 280px;
+    border: 2px solid #888;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.searchBar input:focus {
+    border-color: #333;
+}
+
+
+.searchBar button {
+    padding: 9px 9px 9px 9px;
+    background-color: #333;
+    color: white;
+    border: solid #333;
+    /* border-radius: 0 2px 2px 0; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.searchBar button:hover {
+    background-color: #555;
+}
+
+.searchBar button img {
+    width: 24px;  
+    height: 24px; 
+    object-fit: contain;  
+}
+
+
+.right {
+    display: flex;
+
+}
+
+.Favourites_ref img {
+    width: 50px;
+    height: 50px;
+}
+
+.user-logo {
+    width: 50px;
+    height: 50px; 
+}
+
+
+.suggestions-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+}
+
+.suggestions-list {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    z-index: 10;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.recipes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.recipe-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.recipe-card .recipe-info {
+    padding: 15px;
+}
+
+.recipe-card h3 {
+    margin: 10px 0;
+}
+
+.recipe-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+

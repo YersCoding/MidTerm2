@@ -1,0 +1,251 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: url('../fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Bebas Neue';
+    font-size: 30px;
+    position: relative;
+}
+
+.left-decor, .right-decor {
+    position: fixed;
+    top: 0;
+    width: 100px;
+    height: 100vh;
+    pointer-events: none; /* Makes sure they don’t interfere with scrolling or clicks */
+    opacity: 0.15; /* Adjust opacity for a subtle effect */
+}
+
+.left-decor {
+    left: 0;
+    background-image: url('../assets/sun.png'), url('../assets/cloud.png'); /* Replace with your actual icon paths */
+    background-repeat: no-repeat;
+    background-position: center top, center 50%; /* Adjust positions as needed */
+    background-size: 80px, 80px;
+}
+
+.right-decor {
+    right: 0;
+    background-image: url('../assets/moon-icon.png'), url('../assets/black_cloud.png'); /* Replace with your actual icon paths */
+    background-repeat: no-repeat;
+    background-position: center top, center 50%; /* Adjust positions as needed */
+    background-size: 80px, 80px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.left-decor, .right-decor {
+    animation: float 6s ease-in-out infinite;
+}
+
+
+
+.header_wrapper {
+    background-color: transparent;
+    font-size: 14px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+}
+
+.header_background {
+    background-image: url('../assets/backk.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+}
+
+.searchBar input {
+    padding: 12px;
+    font-size: 1rem;
+    width: 280px;
+    border: 2px solid #888;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.searchBar input:focus {
+    border-color: #333;
+}
+
+
+.searchBar button {
+    padding: 9px 9px 9px 9px;
+    background-color: #333;
+    color: white;
+    border: solid #333;
+    /* border-radius: 0 2px 2px 0; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.searchBar button:hover {
+    background-color: #555;
+}
+
+.searchBar button img {
+    width: 24px;  
+    height: 24px; 
+    object-fit: contain;  
+}
+
+
+
+.main_weather_content {
+    padding-top: 100px;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px; 
+    align-items: flex-start;
+}
+
+.future_days {
+    padding-top: 30px;
+    display: grid;
+    max-width: 1200px;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.currentDay { 
+    width: 100%;
+    display: flex;
+}
+
+.currentDay_content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.currentDay_content_detail {
+    padding-left: 10px;
+    border-color: orange;
+    border-style: solid;
+    border-width: 0px 0px 0px 2px;
+    /* border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px; */
+}
+
+.img_detail {
+    display: flex;
+    align-items: center;
+    /* padding-left: 15px; */
+}
+
+.weather_info {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map_container {
+    width: 600px; /* Set a fixed width for the map container */
+    flex-shrink: 0; /* Prevents the map container from shrinking */
+}
+
+.img_detail img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+#current-date {
+    color: orange;
+}
+
+#city-name {
+    font-size: 40px;
+}
+
+li {
+    font-size: 15px;
+}
+
+.content_container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 1200px; /* Set a max width for the container */
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+#map {
+    width: 100%;
+    height: 324px;
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+.future_days {
+    display: flex;
+    width: 100%; 
+    height: 300px; 
+    justify-content: space-between; 
+    margin-top: 20px;
+}
+
+
+.day-forecast {
+    flex: 1; 
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    padding: 15px;    
+    background: #e3f2fd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-icon {
+    width: 90px;
+    height: 90px;
+}
+
+.forecast-date {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.forecast-temp {
+    font-size: 22px;
+    color: #333;
+}
+
+.forecast-desc {
+    font-size: 18px;
+    color: #777;
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Weather Cast</title> 
+    <link rel="stylesheet" href="css/reset.css"> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+</head> 
+<body> 
+    <div class="left-decor"></div>
+    <div class="right-decor"></div>
+    <section class="header">
+        <div class="header_background">
+        </div>
+        <div class="header_wrapper">
+            <div class="logo">
+                <img src="../assets/logos111.png" alt="logo">
+                <h1>Forecast Live</h1>
+            </div>
+            <div class="searchBar">
+                <input type="text" placeholder="Enter city name..." id="city">
+                <button onclick="getWeather()">
+                    <img src="../assets/search.png" alt="">
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="main_weather_content">
+        <div class="content_container">
+            <div class="weather_info">
+                <div class="city_information">
+                    <h2 id="current-date"></h2>
+                    <h2 id="city-name"></h2>
+                </div>
+                <div class="currentDay">
+                    <div class="currentDay_content" id="weather-info">
+                        <div class="img_detail">
+                            <p id="current-temp"></p>
+                            <img src="" alt="" id="img">
+                        </div>
+                        <div class="currentDay_description">
+                            <p id="description"></p>
+                            <p id="current-feels-like"></p>
+                        </div>
+                        <div class="currentDay_content_detail">
+                            <ul>
+                                <li><p id="current-time"></p></li>
+                                <li><p id="current-humidity"></p></li>
+                                <li><p id="current-wind"></p></li>
+                                <li><p id="max-temp"></p></li>
+                                <li><p id="min-temp"></p></li>
+                                <li><p id="visibility"></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map container -->
+            <div class="map_container">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>    
+    <section class="future_days">
+    </section>
+    <div id="map" style="height: 400px; width: 100%; margin-top: 20px;"></div>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body> 
+</html>

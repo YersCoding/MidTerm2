@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/recipe-details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <div class="header_wrapper">
+            <div class="right">
+                <div class="logo">
+                </div>
+                <div class="searchBar">
+                    <input type="text" placeholder="Search for recipe..." id="searchInput">
+                    <button id="searchButton">
+                        <img src="../assets/search.png" alt="">
+                    </button>
+                    <ul id="suggestionsList" class="suggestions-list"></ul>
+                </div>  
+            </div>
+            <div class="left">
+                <div class="Favourites">
+                    <a href="Favorites.html" class="Favourites">
+                        <img src="assets/user1.png" alt="" class="user-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="recipe-details-container" id="recipeDetailsContainer">
+        <h1 id="recipeTitle">Recipe Title</h1>
+        <div class="recipe-content">
+            <div class="recipe-image-container">
+                <img src="" alt="Recipe Image" id="recipeImage" class="recipe-image">
+            </div>
+            <div class="recipe-description">
+                <div class="nutrition-info">
+                    <h3>Nutritional Information</h3>
+                    <p><strong>Calories:</strong> <span id="calories"></span> kcal</p>
+                    <p><strong>Protein:</strong> <span id="protein"></span> g</p>
+                    <p><strong>Fat:</strong> <span id="fat"></span> g</p>
+                </div>
+                <div class="ingredients">
+                    <h3>Ingredients</h3>
+                    <ul id="ingredientsList">
+                    </ul>
+                </div>
+                <div class="instructions">
+                    <h3>Instructions</h3>
+                    <ol id="instructionsList">
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/recipe-detail.js"></script>
+</body>
+</html>

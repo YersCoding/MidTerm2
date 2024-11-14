@@ -1,0 +1,79 @@
+body {
+    font-family: 'Lato', sans-serif; 
+}
+
+#recipeTitle {
+    font-family: 'Playfair Display', serif; 
+    font-size: 3rem; 
+    font-weight: 700; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    color: #333; 
+}
+
+.recipe-details-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.recipe-content {
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.recipe-image-container {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.recipe-description {
+    flex: 2;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.nutrition-info, .ingredients, .instructions {
+    margin-top: 20px;
+}
+
+.ingredients ul, .instructions ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ingredients ul li, .instructions ol li {
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .recipe-content {
+        flex-direction: column;
+    }
+
+    .recipe-image-container {
+        max-width: 100%;
+    }
+
+    .recipe-description {
+        max-width: 100%;
+    }
+}
